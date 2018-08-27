@@ -1,6 +1,7 @@
 import json
 from pprint import pprint
 from gabi import *
+from csanad import *
 
 
 class Player:
@@ -9,14 +10,8 @@ class Player:
     def betRequest(self, game_state):
         try:
             Gabi().myFunc(game_state)
-            
-            stringJSON = json.dumps(game_state)
-
-            print(stringJSON.__class__)
-            parsedJSON = json.loads(stringJSON)
-            print("MINIMUM RAISE")
-            print(parsedJSON["in_action"]["bet"])
-
+            stringJSON = json.dumps(game_state) # STRING
+            Csanad().myFunc(stringJSON)
             return Gabi().calcBet(game_state)
         except Exception as ex:
             print(ex)
