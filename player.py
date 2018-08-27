@@ -3,6 +3,7 @@ from pprint import pprint
 from gabi import *
 from csanad import *
 from balint import *
+from mate import *
 
 
 class Player:
@@ -14,6 +15,7 @@ class Player:
             stringJSON = json.dumps(game_state) # STRING
             Csanad().myFunc(stringJSON)
             Balint().myFunc(game_state)
+            Mate().isPair(game_state)
             return Gabi().calcBet(game_state)
         except Exception as ex:
             print(ex)
