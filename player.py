@@ -14,7 +14,7 @@ class Player:
 
             parsedJSON = json.loads(stringJSON)
             print("MINIMUM RAISE")
-            print(parsedJSON.minimum_raise)
+            print(parsedJSON["in_action"]["bet"])
 
             return 100
         except Exception as ex:
