@@ -12,12 +12,11 @@ class Player:
     def betRequest(self, game_state):
         try:
             cards = game_state["community_cards"]
-            print('--- COMMUNITY CARDS ---')
-            pprint(cards)
-            print('--- COMMUNITY CARDS ---')
+            if not cards:
+                Csanad().myFunc(game_state)
             Gabi().myFunc(game_state)
-            Csanad().myFunc(game_state)
             Balint().myFunc(game_state)
+            print("Mate")
             Mate().isPair(game_state)
             return Gabi().calcBet(game_state)
         except Exception as ex:
