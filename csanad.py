@@ -1,4 +1,5 @@
 import json
+from gabi import *
 
 class Csanad:
     def myFunc(self, game_state, hand, cards):
@@ -9,8 +10,12 @@ class Csanad:
             first_card_rank = hand[0]["rank"]
             second_card_rank = hand[1]["rank"]
             
+        
+            if (Gabi().fulsh(hand, cards)):
+                return 10000
             
-            
+            if (Gabi().straight(hand, cards)):
+                return 10000
             
             
             if (len(cards) == 0):
