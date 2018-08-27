@@ -11,7 +11,7 @@ class Mate:
                 if first_card_rank == second_card_rank == card["rank"]:
                     return 1000
             else: 
-                return 0
-            except Exception as ex:
+                return game_state["current_buy_in"] - game_state["players"][game_state["in_action"]]["bet"]
+        except Exception as ex:
             print("bad mate")
             print(ex)

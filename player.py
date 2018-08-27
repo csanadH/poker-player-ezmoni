@@ -13,15 +13,7 @@ class Player:
         try:
             cards = game_state["community_cards"]
             hand = game_state["players"][game_state["in_action"]]["hole_cards"]
-            if not cards:
-                return Csanad().myFunc(game_state, hand, cards)
-            elif (len(cards) == 3):
-                return Mate().isPair(game_state, hand, cards)
-            elif (len(cards) == 4):
-                Balint().myFunc(game_state, hand, cards)
-            else:
-                Gabi().myFunc(game_state, hand, cards)
-            return Gabi().calcBet(game_state)
+            return Csanad().myFunc(game_state, hand, cards)
         except Exception as ex:
             print(ex)
             return 0
