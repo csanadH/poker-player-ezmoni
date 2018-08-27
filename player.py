@@ -12,6 +12,7 @@ class Player:
             
             stringJSON = json.dumps(game_state)
 
+            print(stringJSON.__class__)
             parsedJSON = json.loads(stringJSON)
             print("MINIMUM RAISE")
             print(parsedJSON["in_action"]["bet"])
