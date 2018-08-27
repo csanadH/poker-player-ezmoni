@@ -23,6 +23,31 @@ class Gabi:
     def calcBet(self, game):
         return 500
 
+    def straight(self, hand, cards):
+        allcards = hand + cards
+        result = []
+        for card in allcards:
+            if (card["rank"] == "J"):
+                card["rank"] = 11
+            elif (card["rank"] == "Q"):
+                card["rank"] = 12
+            elif (card["rank"] == "K"):
+                card["rank"] = 13
+            elif (card["rank"] == "A"):
+                card["rank"] = 14
+            else:
+                card["rank"] = int(card["rank"])
+            result.append(card["rank"])
+        result.sort()
+        j = 0
+        for i in range(0, len(result) - 1):
+            if (result[i] + 1 == result[i + 1]):
+                j+=1
+        if (j > 3):
+            return True
+        else:
+            return False
+
 
 if __name__ == '__main__':
     json_data=open("sample.json").read()
