@@ -7,13 +7,16 @@ class Player:
     VERSION = "Default Python folding player"
 
     def betRequest(self, game_state):
-        Gabi().myFunc()
-        print("RAISE")
-        players = game_state["in_action"]
-        print(players)
-        print(game_state["community_cards"])
-        print(players["hole_cards"])
-        return 100
+        try:
+            Gabi().myFunc(game_state)
+            print("RAISE")
+            players = game_state["in_action"]
+            print(players)
+            print(game_state["community_cards"])
+            print(players["hole_cards"])
+            return 100
+        except:
+            return 0
 
     def showdown(self, game_state):
         pass
