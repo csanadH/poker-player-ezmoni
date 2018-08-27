@@ -7,8 +7,8 @@ class Gabi:
                 print(palyer)
 
             print(game["community_cards"])
-        except:
-            print("bad gabi")
+        except Exception as ex:
+            print("bad gabi " + ex)
 
     def calcBet(self, game):
         return game["minimum_raise"] + 10
