@@ -2,6 +2,7 @@ import json
 from pprint import pprint
 from gabi import *
 from csanad import *
+from balint import *
 
 
 class Player:
@@ -12,6 +13,7 @@ class Player:
             Gabi().myFunc(game_state)
             stringJSON = json.dumps(game_state) # STRING
             Csanad().myFunc(stringJSON)
+            Balint().myFunc(game_state)
             return Gabi().calcBet(game_state)
         except Exception as ex:
             print(ex)
