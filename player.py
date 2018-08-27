@@ -15,7 +15,7 @@ class Player:
             print(game_state["community_cards"])
             print(players["hole_cards"])
             return 100
-        except as ex:
+        except Exception as ex:
             print(ex)
             return 0
 
