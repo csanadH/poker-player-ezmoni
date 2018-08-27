@@ -10,5 +10,8 @@ class Gabi:
         except Exception as ex:
             print("bad gabi " + ex)
 
+        finally:
+            print("GABI END")
+
     def calcBet(self, game):
         return game["minimum_raise"] + 10
