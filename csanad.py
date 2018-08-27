@@ -5,8 +5,8 @@ class Csanad:
         print("CSANAD")
         try:
             parsed = json.loads(stringJSON)
-            print(parsed["in_action"])
-            print("IN_ACTION")
-            print(parsed["players"][parsed["in_action"]])
+            hand = parsed["players"][parsed["in_action"]]
+            # HAND[0] = first card
+            # HAND[1] = second card
         except Exception as ex:
             print("bad csanad " + ex)
