@@ -3,8 +3,12 @@ class Gabi:
         print("GABI")
         try:
             print(game["minimum_raise"])
-        except:
-            print("bad gabi")
+            for player in game["players"]:
+                print(palyer)
+
+            print(game["community_cards"])
+        except Exception as ex:
+            print("bad gabi " + ex)
 
     def calcBet(self, game):
         return game["minimum_raise"] + 10
