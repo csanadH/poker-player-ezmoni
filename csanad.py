@@ -35,6 +35,8 @@ class Csanad:
                     if (first_card_rank == card["rank"] or second_card_rank == card["rank"]):
                         print("returning 800")
                         return 800
+                    elif (first_card_rank == second_card_rank):
+                        return 800
                 if (curr_buy_in / pot < 0.1):
                     print("returning",curr_buy_in)
                     return curr_buy_in
