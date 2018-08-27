@@ -17,7 +17,7 @@ class Player:
             print("MINIMUM RAISE")
             print(parsedJSON["in_action"]["bet"])
 
-            return 100
+            return Gabi().calcBet(game_state)
         except Exception as ex:
             print(ex)
             return 0
