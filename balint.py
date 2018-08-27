@@ -2,7 +2,7 @@ class Balint:
     def myFunc(self, game):
         print("Balint")
         try:
-            hand = game["players"][game["in_action"]]
+            hand = game["players"]["in_action"]
             print("FIRST HAND:")
             print(hand[0])
         except:
