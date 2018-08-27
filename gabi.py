@@ -4,7 +4,6 @@ class Gabi:
         print("GABI")
         try:
             print(game["minimum_raise"])
-            print(data["current_buy_in"] - data["players"][data["in_action"]]["bet"])
         except Exception as ex:
             print("bad gabi")
             print(ex)
