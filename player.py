@@ -14,6 +14,9 @@ class Player:
             print(players)
             print(game_state["community_cards"])
             print(players["hole_cards"])
+
+            print(json.dumps(game_state))
+
             return 100
         except Exception as ex:
             print(ex)
