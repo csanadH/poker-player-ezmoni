@@ -16,7 +16,7 @@ class Player:
             if not cards:
                 Csanad().myFunc(game_state, hand, cards)
             elif (len(cards) == 3):
-                Mate().isPair(game_state, hand, cards)
+                return Mate().isPair(game_state, hand, cards)
             elif (len(cards) == 4):
                 Balint().myFunc(game_state, hand, cards)
             else:
