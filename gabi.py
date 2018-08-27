@@ -23,6 +23,25 @@ class Gabi:
     def calcBet(self, game):
         return 500
 
+    def fulsh(self, hand, cards):
+        allcards = hand + cards
+        hearts = 0
+        spades = 0
+        clubs = 0
+        diamonds = 0
+        for card in allcards:
+            if (card["suit"] == "hearts"):
+                hearts += 1
+            elif (card["suit"] == "spades"):
+                spades += 1
+            elif (card["suit"] == "clubs"):
+                clubs += 1
+            elif (card["suit"] == "diamonds"):
+                diamonds += 1
+        if (hearts >=4 | spades >= 4 | clubs >= 4 | diamonds >= 4):
+            return True
+        return False
+
     def straight(self, hand, cards):
         allcards = hand + cards
         result = []
@@ -53,5 +72,5 @@ if __name__ == '__main__':
     json_data=open("sample.json").read()
     data = json.loads(json_data)
     asd = data["current_buy_in"] - data["players"][data["in_action"]]["bet"]
-    print(Gabi().myFunc(data, "" ,""))
+    print(Gabi().fulsh([{'rank': '3', 'suit': 'hearts'},{'rank': 'K','suit': 'hearts'},{'rank': '3', 'suit': 'hearts'},{'rank': 'K','suit': 'hearts'},{'rank': '3', 'suit': 'hearts'},{'rank': 'K','suit': 'spades'}], []))
     
