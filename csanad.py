@@ -7,6 +7,6 @@ class Csanad:
             parsed = json.loads(stringJSON)
             print(parsed["in_action"])
             print("IN_ACTION")
-            print(parsed["players"]["in_action"])
-        except:
-            print("bad csanad")
+            print(parsed["players"])
+        except Exception as ex:
+            print("bad csanad " + ex)
