@@ -23,7 +23,7 @@ class Csanad:
                     print("returning 800")
                     return 800
                 elif (first_card_rank in "JQKA" or second_card_rank in "JQKA"):
-                    if (curr_buy_in / pot < 0.3):
+                    if (curr_buy_in / pot < 0.5):
                         print("returning",curr_buy_in)
                         return curr_buy_in
                 else:
@@ -42,7 +42,7 @@ class Csanad:
                         return 800
                     elif (first_card_rank == second_card_rank):
                         return 800
-                if (curr_buy_in / pot < 0.3):
+                if (curr_buy_in / pot < 0.5):
                     print("returning",curr_buy_in)
                     return curr_buy_in
                 else:
