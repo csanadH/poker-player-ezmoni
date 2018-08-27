@@ -7,7 +7,7 @@ class Player:
         print("PARSED JSON")
         parsed = json.loads(game_state)
         print(parsed)
-        return 0
+        return 1
 
     def showdown(self, game_state):
         pass
