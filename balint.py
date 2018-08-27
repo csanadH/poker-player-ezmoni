@@ -1,5 +1,5 @@
 class Balint:
-    def myFunc(self, game):
+    def myFunc(self, game, hand, cards):
         print("Balint")
         try:
             hand = game["players"]["in_action"]

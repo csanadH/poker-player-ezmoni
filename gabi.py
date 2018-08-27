@@ -1,6 +1,6 @@
 import json
 class Gabi:
-    def myFunc(self, game):
+    def myFunc(self, game, hand, cards):
         print("GABI")
         try:
             print(game["minimum_raise"])

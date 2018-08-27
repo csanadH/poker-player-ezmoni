@@ -1,6 +1,6 @@
 
 class Mate:
-    def isPair(self, game_state):
+    def isPair(self, game_state, hand, cards):
         hand = game_state["players"][game_state["in_action"]]
         print(hand[0]["suit"])
         first_card_rank = hand[0]["rank"]
