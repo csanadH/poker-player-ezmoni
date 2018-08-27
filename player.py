@@ -12,7 +12,9 @@ class Player:
     def betRequest(self, game_state):
         try:
             cards = game_state["community_cards"]
+            print('--- COMMUNITY CARDS ---')
             print(cards)
+            print('--- COMMUNITY CARDS ---')
             Gabi().myFunc(game_state)
             Csanad().myFunc(game_state)
             Balint().myFunc(game_state)
