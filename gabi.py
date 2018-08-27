@@ -3,6 +3,10 @@ class Gabi:
         print("GABI")
         try:
             print(game["minimum_raise"])
+            for player in game["players"]:
+                print(palyer)
+
+            print(game["community_cards"])
         except:
             print("bad gabi")
 
