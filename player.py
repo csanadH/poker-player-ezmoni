@@ -12,7 +12,7 @@ class Player:
         players = game_state["in_action"]
         print(players)
         print(game_state["community_cards"])
-        print(players["in_action"]["hole_cards"])
+        print(players["hole_cards"])
         return 100
 
     def showdown(self, game_state):
