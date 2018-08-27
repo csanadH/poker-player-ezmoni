@@ -1,3 +1,3 @@
 class Gabi:
-    def myFunc():
+    def myFunc(self):
         print("GABI")
