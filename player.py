@@ -10,8 +10,9 @@ class Player:
         try:
             Gabi().myFunc(game_state)
             
-            parsedJSON = json.dumps(game_state)
+            stringJSON = json.dumps(game_state)
 
+            parsedJSON = json.loads(stringJSON)
             print("MINIMUM RAISE")
             print(parsedJSON.minimum_raise)
 
