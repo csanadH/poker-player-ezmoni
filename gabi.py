@@ -4,7 +4,7 @@ class Gabi:
         try:
             print(game["minimum_raise"])
             for player in game["players"]:
-                print(palyer)
+                print(player)
 
             print(game["community_cards"])
         except Exception as ex:
