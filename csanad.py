@@ -10,18 +10,23 @@ class Csanad:
             second_card_rank = hand[1]["rank"]
             if (len(cards) == 0):
                 if (first_card_rank == second_card_rank):
+                    print("returning 800")
                     return 800
-                elif (first_card_rank in "89TJQKA" and second_card_rank in "89TJQKA"):
+                elif (first_card_rank in "89TJQKA" or second_card_rank in "89TJQKA"):
                     if (min_call / pot < 0.1):
+                        print("returning",min_call)
                         return min_call
-                    else:
-                        return 0
+                else:
+                    print("returning 0")
+                    return 0
             else:
                 for card in cards:
                     if (first_card_rank == card["rank"] or second_card_rank == card["rank"]):
+                        print("returning 800")
                         return 800
                     else:
-                        if (min_call / pot < 0.1):
+                        if (min_call / pot < 0.3):
+                            print("returning",min_call)
                             return min_call
                         else:
                             return 0
@@ -34,4 +39,4 @@ if __name__ == '__main__':
     json_data=open("sample.json").read()
     data = json.loads(json_data)
     asd = data["current_buy_in"] - data["players"][data["in_action"]]["bet"]
-    print(Csanad().myFunc(data, [{'rank': 'T', 'suit': 'hearts'},{'rank': 'K','suit': 'spades'}], []))
+    print(Csanad().myFunc(data, [{'rank': '3', 'suit': 'hearts'},{'rank': 'K','suit': 'spades'}], []))
