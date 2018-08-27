@@ -14,7 +14,7 @@ class Player:
             cards = game_state["community_cards"]
             hand = game_state["players"][game_state["in_action"]]["hole_cards"]
             if not cards:
-                Csanad().myFunc(game_state, hand, cards)
+                return Csanad().myFunc(game_state, hand, cards)
             elif (len(cards) == 3):
                 Mate().isPair(game_state, hand, cards)
             elif (len(cards) == 4):
