@@ -11,9 +11,10 @@ class Player:
 
     def betRequest(self, game_state):
         try:
+            cards = game_state["community_cards"]
+            print(cards)
             Gabi().myFunc(game_state)
-            stringJSON = json.dumps(game_state) # STRING
-            Csanad().myFunc(stringJSON)
+            Csanad().myFunc(game_state)
             Balint().myFunc(game_state)
             Mate().isPair(game_state)
             return Gabi().calcBet(game_state)
