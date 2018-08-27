@@ -21,8 +21,3 @@ class Player:
 
     def showdown(self, game_state):
         pass
-
-
-    def checkHand(self, game_state):
-        print(players["in_action"]["hole_cards"])
-
