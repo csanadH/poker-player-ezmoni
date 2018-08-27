@@ -2,7 +2,8 @@ class Balint:
     def myFunc(self, game):
         print("Balint")
         try:
-            print(game["players"])
+            hand = game["players"][game["in_action"]]
+            print("First hand: " + hand[0])
         except:
             print("We have an exception in class Balint.")
 
