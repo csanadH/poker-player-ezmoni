@@ -8,7 +8,8 @@ class Gabi:
 
             print(game["community_cards"])
         except Exception as ex:
-            print("bad gabi " + ex)
+            print("bad gabi")
+            print(ex)
 
         finally:
             print("GABI END")
