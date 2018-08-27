@@ -11,8 +11,8 @@ class Csanad:
                 print("high card, returning 600")
                 return 600
             else:
+                print("minimum call returned (no pair and no high card)")
                 return game_state["current_buy_in"] - game_state["players"][game_state["in_action"]]["bet"]
-                print("nopair")
             print("CSANAD END")
             return
         except Exception as ex:
