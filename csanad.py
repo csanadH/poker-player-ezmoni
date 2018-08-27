@@ -1,0 +1,12 @@
+import json
+
+class Csanad:
+    def myFunc(self, stringJSON):
+        print("CSANAD")
+        try:
+            parsed = json.loads(stringJSON)
+            hand = parsed["players"][parsed["in_action"]]
+            # HAND[0] = first card
+            # HAND[1] = second card
+        except Exception as ex:
+            print("bad csanad " + ex)
