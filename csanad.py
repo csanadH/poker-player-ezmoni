@@ -4,6 +4,9 @@ class Csanad:
     def myFunc(self, game_state):
         print("CSANAD")
         try:
+
+            print(game_state["players"], game_state["players"].__class__)
+            print(game_state["in_action"], game_state["in_action"].__class__)
             hand = game_state["players"][game_state["in_action"]]
             print(game_state["players"][game_state["in_action"]])
             print("FIRST CARD=",hand[0]["rank"],",",hand[0]["suit"])
