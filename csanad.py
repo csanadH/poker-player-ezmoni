@@ -5,7 +5,7 @@ class Csanad:
         print("CSANAD START")
         try:
             pot = game_state["pot"]
-            min_call = game_state["current_buy_in"] - game_state["players"][game_state["in_action"]]["bet"]
+            curr_buy_in = game_state["current_buy_in"]
             first_card_rank = hand[0]["rank"]
             second_card_rank = hand[1]["rank"]
             if (len(cards) == 0):
@@ -13,9 +13,9 @@ class Csanad:
                     print("returning 800")
                     return 800
                 elif (first_card_rank in "89TJQKA" or second_card_rank in "89TJQKA"):
-                    if (min_call / pot < 0.1):
-                        print("returning",min_call)
-                        return min_call
+                    if (curr_buy_in / pot < 0.1):
+                        print("returning",curr_buy_in)
+                        return curr_buy_in
                 else:
                     print("returning 0")
                     return 0
@@ -25,9 +25,9 @@ class Csanad:
                         print("returning 800")
                         return 800
                     else:
-                        if (min_call / pot < 0.3):
-                            print("returning",min_call)
-                            return min_call
+                        if (curr_buy_in / pot < 0.3):
+                            print("returning",curr_buy_in)
+                            return curr_buy_in
                         else:
                             return 0
             return 0
