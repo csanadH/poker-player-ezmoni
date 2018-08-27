@@ -1,10 +1,12 @@
+import json
 
 class Player:
     VERSION = "Default Python folding player"
 
     def betRequest(self, game_state):
-        print("PRINT")
-        print(game_state)
+        print("PARSED JSON")
+        parsed = json.loads(game_state)
+        print(parsed)
         return 0
 
     def showdown(self, game_state):
