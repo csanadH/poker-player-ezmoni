@@ -9,12 +9,11 @@ class Player:
     def betRequest(self, game_state):
         try:
             Gabi().myFunc(game_state)
-            print("RAISE")
-            players = game_state["in_action"]
-            print(players)
-            print(game_state["community_cards"])
+            
+            parsedJSON = json.dumps(game_state)
 
-            print(json.dumps(game_state))
+            print("MINIMUM RAISE")
+            print(parsedJSON.minimum_raise)
 
             return 100
         except Exception as ex:
