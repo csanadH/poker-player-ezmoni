@@ -19,6 +19,7 @@ class Player:
             Gabi().myFunc(game_state)
             Csanad().myFunc(game_state)
             Balint().myFunc(game_state)
+            print("Mate")
             Mate().isPair(game_state)
             return Gabi().calcBet(game_state)
         except Exception as ex:
