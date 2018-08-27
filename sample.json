@@ -5,7 +5,7 @@
     "bet_index":0,                                  
     "small_blind": 10,                              
     "current_buy_in": 100,                          
-    "pot": 400,                                     
+    "pot": 800,                                     
     "minimum_raise": 240,                           
     "dealer": 1,                                    
     "orbits": 7,                                    
