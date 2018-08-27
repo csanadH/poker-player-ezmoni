@@ -15,7 +15,8 @@ class Player:
             print(game_state["community_cards"])
             print(players["hole_cards"])
             return 100
-        except:
+        except as ex:
+            print(ex)
             return 0
 
     def showdown(self, game_state):
