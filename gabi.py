@@ -1,11 +1,10 @@
+import json
 class Gabi:
     def myFunc(self, game):
         print("GABI")
         try:
             print(game["minimum_raise"])
-            print(game["in_action"]["hole_cards"])
-
-            print(game["community_cards"])
+            print(data["current_buy_in"] - data["players"][data["in_action"]]["bet"])
         except Exception as ex:
             print("bad gabi")
             print(ex)
@@ -18,5 +17,8 @@ class Gabi:
 
 
     if __name__ == '__main__':
-        print("gabi")
-        myFunc("asd")
+        json_data=open("sample.json").read()
+        data = json.loads(json_data)
+        asd = data["current_buy_in"] - data["players"][data["in_action"]]["bet"]
+        print(asd)
+    
