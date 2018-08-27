@@ -13,7 +13,7 @@ class Player:
         try:
             cards = game_state["community_cards"]
             print('--- COMMUNITY CARDS ---')
-            print(cards)
+            pprint(cards)
             print('--- COMMUNITY CARDS ---')
             Gabi().myFunc(game_state)
             Csanad().myFunc(game_state)
