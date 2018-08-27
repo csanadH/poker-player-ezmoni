@@ -12,6 +12,6 @@ class Mate:
                     return 1000
             else: 
                 return 0
-            except Exception as ex:
+        except Exception as ex:
             print("bad mate")
             print(ex)
