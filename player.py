@@ -9,9 +9,16 @@ class Player:
     def betRequest(self, game_state):
         Gabi.myFunc()
         print("RAISE")
-        print(game_state["current_buy_in"] - game_state["players[in_action][bet]"] + game_state["minimum_raise"]  )
-        return game_state["current_buy_in"] - game_state["players[in_action][bet]"] + game_state["minimum_raise"]     
+        players = game_state["in_action"]
+        print(players)
+        print(game_state["community_cards"])
+        self.checkHand(game_state)
+        return 100
 
     def showdown(self, game_state):
         pass
+
+
+    def checkHand(game_state):
+        print(players["in_action"]["hole_cards"])
 
