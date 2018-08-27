@@ -13,6 +13,7 @@ class Player:
         try:
             cards = game_state["community_cards"]
             print('--- COMMUNITY CARDS ---')
+            print(game_state)
             print(cards)
             print('--- COMMUNITY CARDS ---')
             Gabi().myFunc(game_state)
