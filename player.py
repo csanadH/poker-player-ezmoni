@@ -1,10 +1,13 @@
 import json
 from pprint import pprint
+from gabi import *
+
 
 class Player:
     VERSION = "Default Python folding player"
 
     def betRequest(self, game_state):
+        Gabi.myFunc()
         print("RAISE")
         players = game_state["in_action"]
         print(players)
