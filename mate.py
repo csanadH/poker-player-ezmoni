@@ -6,6 +6,7 @@ class Mate:
         first_card_rank = hand[0]["rank"]
         second_card_suit = hand[1]["suit"]
         second_card_rank = hand[1]["rank"]
+        print("pair")
         print(first_card_rank)
         print(second_card_rank)
         if(first_card_rank == second_card_rank):
