@@ -14,7 +14,7 @@ class Gabi:
             print("GABI END")
 
     def calcBet(self, game):
-        return game["current_buy_in"] - game["players"]["in_action"]["bet"] + 10
+        return game["current_buy_in"] - game["players"][game["in_action"]]["bet"] + 10
 
 
     if __name__ == '__main__':
